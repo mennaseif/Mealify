@@ -1,0 +1,92 @@
+:root:has(.mode input:checked){
+    --background-color-basic:#000;
+    --black-color:#fff;
+    --white-color:#000;
+    --color-primary:#c17e1f;
+    --btn-hover-color: hsl( 35, 72%, calc(44% + 5%) );
+    --font-primary:"Open Sans", sans-serif;
+    --background-color:#252525;
+    --secondary-font:"Amatic SC", sans-serif;
+    --third-font:"Inter", sans-serif;
+    --h1-color:#fff;
+    --p-color:#9f9f9f;
+    --grey-color: #9f9f9f;
+    --animation-direction:400ms ;
+}
+
+body:not(:has(:target)):has(.mode input:(:checked))  .home-link,
+body:has(.home:target):has(.mode input:(:checked))  .home-link,
+body:has(.chefs:target):has(.mode input:(:checked))  .chefs-link,
+body:has(.gallery:target) :has(.mode input:(:checked)) .gallery-link,
+body:has(.contact:target):has(.mode input:(:checked)) .contact-link
+{
+    color:var(--black-color);
+}
+
+body:has(.mode input:checked){
+    background-color: #202020;
+}
+
+body:has(.mode input:checked) .chefs-cards .card{
+    background-color:  #161616;
+}
+    
+
+
+body:has(.mode input:checked) .card picture::before{
+    background-image:url(team-shape-dark.svg);
+}
+
+body:not(:has(:target)) .home-link::before,
+body:has(.home:target) .home-link::before,
+body:has(.chefs:target) .chefs-link::before,
+body:has(.gallery:target) .gallery-link::before,
+body:has(.contact:target) .contact-link::before
+{
+    width: 100%;
+}
+
+body:has(.mode input:checked) .navbar  ul li a:hover{
+    color: var(--black-color);
+}
+
+body:has(.mode input:checked) .mode .light{
+    display:block;
+    color: var(--black-color);
+}
+
+body:has(.mode input:checked) .mode .dark{
+    display:none;
+}
+
+body:has(.mode input:checked).contact form{
+    background-color: hsl( 0, 0%, 9% );
+}
+
+.contact .contact-means h3{
+    color:  #adadad; 
+}
+
+body:has(.mode input:checked) .contact .contact-means .content{
+    color: #fff;
+}
+
+body:has(.mode input:checked) .contact .contact-means .content a{
+    color: #fff;
+}
+
+footer{
+    color: #fff;
+}
+
+footer .quick-links ul li a{
+    color:#fff;
+}
+
+footer .contact-details ul li a{
+    color:#fff;
+}
+
+body:has(.mode input:checked) .contact .contact-means > div{
+    background-color: #000;
+}
